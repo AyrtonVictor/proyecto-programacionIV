@@ -1,0 +1,12 @@
+
+##Estado del pryecto
+##Autor
+
+echo "# asd" >> README.md
+
+git init
+git add .
+git commit -m "Commit 3"
+git branch -M main
+git remote add origin https://github.com/AyrtonVictor/proyecto-programacionIV
+git push -u origin main
