@@ -1,8 +1,11 @@
 #Visual Studio Code
 .vscode/
+.js\Ejercicios
 
 #Variables de entorno
 .env
 
 #Node.js
 node_modules/
+
+
