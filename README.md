@@ -78,10 +78,6 @@ Próximamente:
 
 ## Autor
 
-
-
-Nombre del estudiante
-
-
+Ayrton Victor
 
 Programación IV

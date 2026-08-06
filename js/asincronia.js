@@ -185,22 +185,30 @@
 
 
 
-function obtenerUsuario() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve({
-                id: 1,
-                nombre: "Maria",
-                edad: 25
-            })
-        }, 3000);
-    })
+// function obtenerUsuario() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve({
+//                 id: 1,
+//                 nombre: "Maria",
+//                 edad: 25
+//             })
+//         }, 3000);
+//     })
+// }
+
+// async function mostrarUsuario() {
+//     console.log("Consultando usuario...")
+//     const usuario = await obtenerUsuario()
+//     console.log(usuario)
+// }
+
+// mostrarUsuario();
+
+
+async function prueba() {
+    const respuesta = await fetch("https://jsonplaceholder.typicode.com/users");
+    console.log(respuesta)
 }
 
-async function mostrarUsuario() {
-    console.log("Consultando usuario...")
-    const usuario = await obtenerUsuario()
-    console.log(usuario)
-}
-
-mostrarUsuario();
+prueba();
