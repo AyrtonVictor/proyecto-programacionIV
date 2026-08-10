@@ -205,6 +205,16 @@
 
 // mostrarUsuario();
 
+//1
+
+async function prueba() {
+    const respuesta = await fetch("https://jsonplaceholder.typicode.com/users");
+    console.log(respuesta)
+}
+
+prueba();
+
+// 2
 
 async function prueba() {
     const respuesta = await fetch("https://jsonplaceholder.typicode.com/users");

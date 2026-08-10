@@ -10,3 +10,37 @@ git commit -m "Commit 3"
 git branch -M main
 git remote add origin https://github.com/AyrtonVictor/proyecto-programacionIV
 git push -u origin main
+
+
+(entre la consola y el Aplication)
+
+const materia = ()
+
+const materia = {
+    id: 1,
+    nombre: "Programacion IV"
+}
+
+console.log(materia)
+
+console.log(typeof materia)
+
+localStorage.setItem("materia", materia)
+
+console.log(materia)
+
+JSON.stringify(materia)
+
+localStorage.setItem("materia", JSON.stringify(materia))
+
+const mat = localStorage.getItem("materia")
+
+console.log(mat)
+
+console.log(typeof mat)
+
+const recuperarMateria = JSON.parse(mat)
+
+console.log(typeof recuperarMateria)
+
+localStorage

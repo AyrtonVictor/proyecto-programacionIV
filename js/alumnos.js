@@ -50,7 +50,16 @@ async function obtenerAlumnos() {
 
 
 function mostrarAlumnos(alumnos) {
-    console.table(alumnos)
+    // console.table(alumnos)
+    console.log(typeof alumnos)
+    localStorage.setItem("alumnos", JSON.stringify(alumnos))
+    const datos = localStorage.getItem("alumnos")
+    console.log(typeof datos)
+    console.log(datos)
+    const alumnoRecuperados = JSON.parse(datos)
+    console.log(typeof alumnoRecuperados)
+    console.table(alumnoRecuperados)
+
     // console.log(alumnos(5).email)
 
     // for (const alumno of alumnos) {
@@ -66,3 +75,5 @@ async function iniciar() {
 iniciar();
 
 // probar trer el recurso /post y /coments, traer id,titulo y usuario.
+
+
