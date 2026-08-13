@@ -69,3 +69,33 @@ td {
 th {
     background-color: aqua;
 }
+
+#mensaje {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: blueviolet;
+    color: aquamarine;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+
+.mje-error {
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: coral;
+    color: #991b1b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.oculto {
+    display: none;
+}
