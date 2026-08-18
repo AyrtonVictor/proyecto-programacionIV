@@ -5,13 +5,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: paleturquoise;
-
+    background-color: #f1f5f9;
+    color: #1e293b;
 }
 
 header {
-    background-color: darkcyan;
-    color: white;
+    background-color: #0f172a;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
 }
@@ -23,31 +23,38 @@ main {
 }
 
 section {
-    background-color: cornsilk;
+    background-color: #ffffff;
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 8px;
-
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
 
 input {
     padding: 10px;
-    border: 1px;
+    border: 1px solid #cbd5e1;
     border-radius: 5px;
+    background-color: #ffffff;
+    color: #0f172a;
 }
 
 button {
-    padding: 10 px 15px;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #1d4ed8;
 }
 
 form button {
@@ -62,12 +69,13 @@ table {
 th,
 td {
     padding: 12px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #e2e8f0;
     text-align: left;
 }
 
 th {
-    background-color: aqua;
+    background-color: #f8fafc;
+    color: #475569;
 }
 
 #mensaje {
@@ -77,25 +85,53 @@ th {
     padding: 15px 20px;
     border-radius: 8px;
     font-weight: bold;
-    background-color: blueviolet;
-    color: aquamarine;
+    background-color: #10b981;
+    color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 1000;
 }
 
-
 .mje-error {
-
     position: fixed;
     top: 20px;
     right: 20px;
     padding: 15px 20px;
     border-radius: 8px;
-    background-color: coral;
-    color: #991b1b;
+    background-color: #ef4444;
+    color: #ffffff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .oculto {
     display: none;
+}
+
+.btn-editar,
+.btn-eliminar {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 3px;
+    font-size: 14px;
+}
+
+.btn-editar {
+    background-color: #f3f3c7;
+    color: #ff7913;
+}
+
+.btn-eliminar {
+    background-color: #f3f3c7;
+    color: #dc2626;
+}
+
+.btn-editar:hover {
+    background-color: #b45309;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #dc2626;
+    color: white;
 }
