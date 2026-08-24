@@ -1,4 +1,30 @@
 # Sistema de Gestión Académica (SGA)
+# Gestion del proyecto
+
+clase 10 Estructura Actual
+SGA/
+|
+|
+|
+|
+|
+|
+|
+|________index.html
+|
+|________alumnos.html
+|
+|________docentes.html
+|
+|________css/
+|          |________Estilos.css
+|
+|________js/
+           |________Alumnos.js
+           |________Docentes.js
+
+
+
 
 
 

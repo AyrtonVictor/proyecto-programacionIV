@@ -5,62 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGA</title>
-    <script src="JS/alumnos.js" defer></script>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
-
     <header>
-        <h1>Sistema de Gestion Academica</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="alumnos.html">Alumnos</a>
+            <a href="docentes.html">Docentes</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="formulario">
-            <h2>Proyecto de Programacion IV</h2>
+    <main class="inicio">
 
-            <form id="formAlumno">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre"><br><br>
-
-                <label for="carrera">Carrera</label>
-                <input type="text" id="carrera"><br><br>
-
-                <label for="correo">Correo</label>
-                <input type="text" id="correo"><br><br>
-
-                <button type="submit">Guardar</button>
-
-            </form>
-
-            <p id="mensaje" class="oculto"> </p>
-
+        <h1>Sistema de Gestion Academica</h1>
+        <p>Bienvenido el sistema de Gestion</p>
+        <section class="modulos">
+            <a href="alumnos.html" class="tarjeta">
+                <i class="fa-solid fa-user"> </i>
+                <h2>Alumnos</h2>
+                <p>Gestionar alumnos</p>
+            </a>
+            <a href="docentes.html">
+                <i class="fa-solid fa-chalkboard-user"> </i>
+                <h2>Docentes</h2>
+                <p>Gestionar docentes</p>
+            </a>
+            <div class="tarjeta tarjeta-desabilitada">
+                <i class="fa-solid fa-book"></i>
+                <h2>Materias</h2>
+                <p>Proximamente...</p>
+            </div>
         </section>
-
-
-
-        <section class="alumnos">
-            <h2>Alumnos registrados</h2>
-            <p id="cantidadAlumnos"></p>
-            <!-- <ul id="listaAlumnos"></ul> -->
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Carrera</th>
-                        <th>Correo</th>
-                        <th>Accines</th>
-
-                    </tr>
-                </thead>
-                <tbody id="listaAlumnos"></tbody>
-            </table>
-        </section>
-
-
     </main>
+
 </body>
 
 </html>

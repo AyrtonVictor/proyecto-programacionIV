@@ -1,0 +1,3 @@
+function guardarDatos(Clave, datos) {
+
+}
