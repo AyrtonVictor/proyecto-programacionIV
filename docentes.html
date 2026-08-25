@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="JS/storage.js" defer></script>
+    <script src="JS/ui.js"></script>
+    <script src="JS/docentes.js" defer></script>
     <title>Docentes</title>
 
 </head>
 
 <body>
-
     <header>
         <nav>
             <a href="index.html">Inicio</a>
@@ -20,7 +22,53 @@
         </nav>
     </header>
     <main>
+        <h1>Gestion de Docentes</h1>
+        <section class="formulario-conteiner">
+            <h2>Proyecto de Programacion IV</h2>
+            <form id="formulario">
 
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre">
+                </div>
+                <div class="campo">
+                    <label for="carrera">Carrera</label>
+                    <input type="text" id="carrera">
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="text" id="correo">
+                </div>
+                <button type="submit">Guardar</button>
+
+            </form>
+            <!-- 
+            <p id="mensaje" class="oculto"> </p> -->
+
+        </section>
+
+
+
+        <section class="lista-conteiner">
+            <h2>Docentes registrados</h2>
+            <!-- <p id="cantidadAlumnos"></p> -->
+            <!-- <ul id="listaAlumnos"></ul> -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Carrera</th>
+                        <th>Correo</th>
+                        <th>Accines</th>
+
+                    </tr>
+                </thead>
+                <tbody id="listaAlumnos"></tbody>
+            </table>
+        </section>
+
+        <div id="mensaje" class="oculto"></div>
     </main>
 </body>
 

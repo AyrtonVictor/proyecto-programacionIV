@@ -44,3 +44,43 @@ const recuperarMateria = JSON.parse(mat)
 console.log(typeof recuperarMateria)
 
 localStorage
+
+
+
+
+
+
+(function generar200Alumnos() {
+    const nombres = ["Carlos", "Ana", "Luis", "Maria", "Juan", "Sofía", "Pedro", "Lucía", "Diego", "Elena"];
+    const apellidos = ["Gómez", "Pérez", "Rodríguez", "Fernández", "López", "Martínez", "Sánchez", "Díaz"];
+    const materias = ["Programación", "Matemáticas", "Física", "Base de Datos", "Sistemas Operativos", "Redes", "Inglés", "Diseño Web"];
+    const dominios = ["gmail.com", "hotmail.com", "yahoo.com", "universidad.edu"];
+
+    const alumnosExistentes = JSON.parse(localStorage.getItem("alumnos")) || [];
+    const nuevosAlumnos = [];
+
+    for (let i = 1; i <= 200; i++) {
+        const nom = nombres[Math.floor(Math.random() * nombres.length)];
+        const ape = apellidos[Math.floor(Math.random() * apellidos.length)];
+        const nombreCompleto = `${nom} ${ape}`;
+        const carrera = materias[Math.floor(Math.random() * materias.length)];
+        const correo = `${nom.toLowerCase()}.${ape.toLowerCase()}${i}@${dominios[Math.floor(Math.random() * dominios.length)]}`;
+
+        nuevosAlumnos.push({
+            id: Date.now() + i,
+            nombre: nombreCompleto,
+            carrera: carrera,
+            correo: correo
+        });
+    }
+
+    const listaCompleta = [...alumnosExistentes, ...nuevosAlumnos];
+    localStorage.setItem("alumnos", JSON.stringify(listaCompleta));
+    
+    // Si la función mostrarAlumnos existe en tu scope actual, actualiza la tabla
+    if (typeof mostrarAlumnos === "function") {
+        mostrarAlumnos(listaCompleta);
+    }
+    
+    console.log("¡200 alumnos agregados con éxito!");
+})();

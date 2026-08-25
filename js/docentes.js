@@ -57,28 +57,17 @@ formulario.addEventListener("submit", function (event) {
     }
 
 
-    localStorage.setItem("docentes", JSON.stringify(docentes))
+    // localStorage.setItem("docentes", JSON.stringify(docentes))
+    guardarDatos("docentes", docentes)
     mostrardocentes(docentes)
     formulario.reset()
 
 });
 
 function obtenerdocentes() {
-    const datos = localStorage.getItem("docentes")
-    if (datos) {
-        return JSON.parse(datos)
-    }
-    return []
+    return obtenerDatos("docentes")
 }
 
-function mostrarMensaje(texto, tipo = "mje-exito") {
-    mensaje.textContent = texto;
-    mensaje.className = tipo;
-    setTimeout(() => {
-        mensaje.textContent = "";
-        mensaje.className = "oculto";
-    }, 3000);
-}
 
 
 //Esto va agregando a la lista que se mostrara en el index
