@@ -3,46 +3,39 @@
 
 clase 10 Estructura Actual
 SGA/
-|
-|
-|
-|
-|
-|
-|
+frontend
 |________index.html
-|
 |________alumnos.html
-|
 |________docentes.html
-|
 |________css/
 |          |________Estilos.css
 |
 |________js/
            |________Alumnos.js
            |________Docentes.js
+backend
+
+## Estado actual
+
+- Pagina de inicio y navegacion entre modulos
+- Modulo alumnos-docentes
+- CRUD alumnos/docentes
+- persistencia mediante localStorage
+- Organizacion del codigo y refactorizacion
+- Separacion inicial entre frontend y backend
 
 
+## Almacenamiento
 
-
-
-
-Proyecto desarrollado durante la materia Programación IV.
-
+-localStoage
+-json.stringify()
+-json.parse()
 
 
 ## Descripción
-
-
-
 El Sistema de Gestión Académica (SGA) es una aplicación web que permitirá administrar alumnos, docentes, cursos y materias.
 
-
-
 Durante el desarrollo del proyecto se incorporarán progresivamente nuevas tecnologías y funcionalidades.
-
-
 
 ## Objetivos
 
@@ -92,13 +85,6 @@ Próximamente:
 
 - MongoDB
 
-
-
-## Estado del proyecto
-
-
-
-🚧 En desarrollo.
 
 
 

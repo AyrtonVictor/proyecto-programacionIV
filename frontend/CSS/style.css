@@ -244,9 +244,25 @@ th {
 }
 
 
-.tarjeta--deshabilitada {
+.tarjeta-deshabilitada {
     opacity: 0.5;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.tarjeta--deshabilitada:hover
+.tarjeta-deshabilitada:hover {
+    transform: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.acciones-form {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cancelar {
+    background-color: #1d4ed8;
+}
+
+.btn-cancelar:hover {
+    background-color: #475569;
+}

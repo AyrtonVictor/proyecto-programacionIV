@@ -3,6 +3,11 @@ const mensaje = document.querySelector("#mensaje");
 const listaAlumnos = document.querySelector("#listaAlumnos");
 let alumnoEditandoId = null;
 let alumnoEditar = null;
+const btnCancelar = document.querySelector("#btnCancelar")
+btnCancelar.style.display = "none"
+
+const btnGuardar = document.querySelector("#btnGuardar")
+
 
 // Funciones auxiliares para LocalStorage
 function guardarDatos(clave, datos) {
@@ -72,12 +77,12 @@ formulario.addEventListener("submit", function (event) {
         // } Esto es una vercion como la de abajo pero es mucho mas largo. Necesita el stringify para comparar.
 
         if (JSON.stringify(datosActuales) === JSON.stringify(alumnoEditar)) {
-            mostrarMensaje("No se realizaron cambios", "Se realizaron cambios")
+            mostrarMensaje("No se realizaron cambios", "mje-adv")
 
         }
         alumnoEditandoId = null;
         alumnoEditar = null;
-        formulario.querySelector("button").textContent = "Guardar alumno";
+        btnGuardar.textContent = "Guardar alumno";
         mostrarMensaje("Alumno actualizado correctamente", "msj-exito");
     }
 
@@ -162,10 +167,23 @@ function editarAlumno(id) {
     }
 
     alumnoEditandoId = id;
-    formulario.querySelector("button").textContent = "Actualizar alumno";
+    btnCancelar.style.display = "inline-block"
+    btnGuardar = "Actualizar alumno";
     document.querySelector("#nombre").focus();
 }
 
 // Carga inicial
+
+function cancelarEdicion() {
+    formulario.reset()
+    alumnoEditandoId = null
+    alumnoEditar = null
+
+    formulario.querySelector("button").textContent = "Guardar alumno"
+    btnCancelar.style.display = "none"
+}
+
+btnCancelar.addEventListener("click", cancelarEdicion)
+
 const alumnosIniciales = obtenerAlumnos();
 mostrarAlumnos(alumnosIniciales);
