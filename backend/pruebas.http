@@ -1,0 +1,71 @@
+GET http://localhost:3000/alumnos
+
+###
+
+GET http://localhost:3000/alumnos
+
+###
+
+GET http://localhost:3000/alumnos/1
+
+###
+
+GET http://localhost:3000/alumnos/3
+
+###
+
+GET http://localhost:3000/alumnos/141
+
+###
+
+
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+        "id": 300,
+        "nombre": "Lucia Fernandez",
+        "carrera": "metalurgica",
+        "correo": "lucifernandez@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+        "id": 300,
+        "nombre": "Martin Gallanes",
+        "carrera": "Metafisica",
+        "correo": "martingallanes@gmail.com"
+}
+
+###
+
+GET http://localhost:3000/alumnos/300
+
+###
+
+PUT http://localhost:3000/alumnos/300
+Content-Type: application/json
+
+{
+        "id": 300,
+        "nombre": "Martin Gallardo",
+        "carrera": "Metafisica neutoneana",
+        "correo": "martingallanes@gmail.com"
+}
+
+
+###
+GET http://localhost:3000/alumnos
+
+
+
+###
+DELETE http://localhost:3000/alumnos/2
+
+###
+
+USE http://localhost:3000/alumnos
