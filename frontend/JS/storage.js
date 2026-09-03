@@ -1,5 +1,5 @@
 function guardarDatos(Clave, datos) {
-    localStorage.setItem(Clave, JSON.stringify / (datos))
+    localStorage.setItem(Clave, JSON.stringify(datos))
 }
 
 

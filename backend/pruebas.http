@@ -1,6 +1,9 @@
-GET http://localhost:3000/alumnos
 
 ###
+GET http://localhost:3000/docentes
+
+###
+
 
 GET http://localhost:3000/alumnos
 

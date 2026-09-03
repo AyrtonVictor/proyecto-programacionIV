@@ -84,3 +84,14 @@ localStorage
     
     console.log("¡200 alumnos agregados con éxito!");
 })();
+
+
+
+cd backend
+
+npm init -y
+npm install express
+
+npm.cmd init -y
+npm.cmd install express
+

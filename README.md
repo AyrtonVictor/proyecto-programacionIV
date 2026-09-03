@@ -2,18 +2,26 @@
 # Gestion del proyecto
 
 clase 10 Estructura Actual
+
+
+
 SGA/
 frontend
 |________index.html
 |________alumnos.html
 |________docentes.html
 |________css/
-|          |________Estilos.css
-|
+|          |________style.css
 |________js/
-           |________Alumnos.js
-           |________Docentes.js
+           |________alumnos.js
+           |________docentes.js
+           |________ui.js
+           |________asincronia.js
+           |________storage.js
 backend
+
+
+
 
 ## Estado actual
 

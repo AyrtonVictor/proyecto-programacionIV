@@ -1,8 +1,9 @@
 const express = require("express")
+const { obtenerDocentes } = require("../controllers/docentes.controller")
 const router = express.Router()
 
 
-router.get("/", obtenerDocente)
+router.get("/", obtenerDocentes)
 
 // router.get("/", (req, res) => {               Modificado por ota vercion de arriba, se saca de docentes.controller
 //     res.json(docentes)
@@ -39,16 +40,5 @@ router.delete("/:id", (req, res) => {
     docentes = docentes.filter(docente => docente.id !== id)  // reasigna docentes, no "docente"
     res.json({ mensaje: "Docente eliminado correctamente" })
 })
-
-router.use((req, res, next) => {
-    console.log(req.method);
-    console.log(res.url);
-    next();
-})
-
-router.listen(3000, () => {
-    console.log("Servidor funcioando en http://localhost:3000")
-})
-
 
 module.exports = router

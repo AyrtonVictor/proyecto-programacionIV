@@ -1,63 +1,19 @@
-//generalmente se pone el mismo nombre
 const express = require("express")
 const app = express()
 app.use(express.json())
-const alumnosRouters = require("/routers/alumnos.routes")
-const docentesRouters = requier("/routers/docentes.routes")
-app.use / ("/alumos", alumnosRouters)
-app.use / ("/docentes", docentesRouters)
-// La const es constante y no se puede modificar, y let es modificable.
 
+const alumnosRouters = require("./routers/alumnos.routers")
+const docentesRouters = require("./routers/docentes.routers")
 
-let alumnos = [
-    {
-        id: 1,
-        nomrbe: "Ana",
-        carrera: "Programacion"
-    }
-    ,
-    {
-        id: 2,
-        nomrbe: "Jose",
-        carrera: "Sistemas"
-    }
-    ,
-    {
-        id: 3,
-        nomrbe: "Juan",
-        carrera: "Castrador de Caballos profecional"
-    }
-    ,
-    {
-        id: 4,
-        nomrbe: "Walter White",
-        carrera: "Quimico"
-    }
-    ,
-    {
-        id: 5,
-        nomrbe: "Lionel",
-        carrera: "Fisica de Particulas"
-    }
+app.use("/alumnos", alumnosRouters)
+app.use("/docentes", docentesRouters)
 
-]
+app.use((req, res, next) => {
+    console.log(req.method);
+    console.log(req.url);
+    next();
+})
 
-let docentes = [
-    {
-        id: 1,
-        nomrbe: "marta",
-        carrera: "Quimica"
-    }
-    ,
-    {
-        id: 2,
-        nomrbe: "Manuel",
-        carrera: "Geografia"
-    }
-    ,
-    {
-        id: 3,
-        nomrbe: "Carlos",
-        carrera: "Mateamticas"
-    }
-]
+app.listen(3000, () => {
+    console.log("Servidor funcionando en http://localhost:3000")
+})
