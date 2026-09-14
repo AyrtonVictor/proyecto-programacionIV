@@ -4,16 +4,18 @@ GET http://localhost:3000/docentes
 
 ###
 
-
 GET http://localhost:3000/alumnos
 
 ###
 
-GET http://localhost:3000/alumnos/1
+GET http://localhost:3000/alumnos/6aa1a451de0fb127693ef4a9
 
 ###
 
 GET http://localhost:3000/alumnos/3
+
+
+
 
 ###
 
@@ -22,15 +24,29 @@ GET http://localhost:3000/alumnos/141
 ###
 
 
+# POST http://localhost:3000/alumnos
+# Content-Type: application/json
+
+# {
+#         "id": 300,
+#         "nombre": "Lucia Fernandez",
+#         "carrera": "metalurgica",
+#         "correo": "lucifernandez@gmail.com"
+# }
+
+
+
 POST http://localhost:3000/alumnos
 Content-Type: application/json
 
+
 {
-        "id": 300,
+        "legajo": 301,
         "nombre": "Lucia Fernandez",
         "carrera": "metalurgica",
         "correo": "lucifernandez@gmail.com"
 }
+
 
 ###
 
@@ -38,23 +54,18 @@ POST http://localhost:3000/alumnos
 Content-Type: application/json
 
 {
-        "id": 300,
+        "legajo": 304,
         "nombre": "Martin Gallanes",
         "carrera": "Metafisica",
         "correo": "martingallanes@gmail.com"
 }
 
 ###
-
-GET http://localhost:3000/alumnos/300
-
-###
-
-PUT http://localhost:3000/alumnos/300
+PUT http://localhost:3000/alumnos/303
 Content-Type: application/json
 
 {
-        "id": 300,
+        "legajo": 303,
         "nombre": "Martin Gallardo",
         "carrera": "Metafisica neutoneana",
         "correo": "martingallanes@gmail.com"
@@ -67,8 +78,20 @@ GET http://localhost:3000/alumnos
 
 
 ###
-DELETE http://localhost:3000/alumnos/2
+DELETE http://localhost:3000/alumnos/303
+
 
 ###
 
 USE http://localhost:3000/alumnos
+
+###
+POST http://localhost:3000/alumnos/303
+Content-Type: application/json
+
+{
+        "id": 12,
+        "nombre": "Mateo",
+        "carrera": "Metafisica",
+        "correo": "martingallanes@gmail.com"
+}
