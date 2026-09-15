@@ -1,16 +1,24 @@
 const express = require("express")
 const app = express()
+const cors = require('cors');
 app.use(express.json())
-const alumnosRouters = require("./routers/alumnos.routers")
-const docentesRouters = require("./routers/docentes.routers")
-const conectarDB = require("./config/database")
-app.use("/alumnos", alumnosRouters)
-app.use("/docentes", docentesRouters)
+app.use(cors())
 
+const alumnosRouters = require("./routers/alumnos.routers")
+app.use("/alumnos", alumnosRouters)
+
+
+const conectarDB = require("./config/database")
 require("dotenv").config()
+
 const PORT = process.env.PORT
 
 conectarDB()
+console.log("Ejectuado con nodemon")
+
+
+const docentesRouters = require("./routers/docentes.routers")
+app.use("/docentes", docentesRouters)
 
 
 

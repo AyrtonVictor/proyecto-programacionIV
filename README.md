@@ -31,6 +31,19 @@ backend
 - persistencia mediante localStorage
 - Organizacion del codigo y refactorizacion
 - Separacion inicial entre frontend y backend
+-Implementacion de validaciones para los datos recibidos mediante req.body
+- Uso de status 404 para datos invalidos
+- status 404 para alumno no encontrado
+- status 201 para registrar nuevo alumno
+- status 200
+- manejo basico de errores en las operaciones del CRUD
+- instalacion de mongoose
+- Creacion de conexion con MongoDB en config/database.js
+- Creacion de Schema y modelos Alumno
+- Remplazo del Arrayen memoria por una conexion de MongoDB
+- Modificacion de GET /alumnos para consultar MongoDB
+- Prueba de la API con datos almacenados en MongoDB
+- 
 
 
 ## Almacenamiento
@@ -38,7 +51,7 @@ backend
 -localStoage
 -json.stringify()
 -json.parse()
-
+-MongoDB
 
 ## Descripción
 El Sistema de Gestión Académica (SGA) es una aplicación web que permitirá administrar alumnos, docentes, cursos y materias.
@@ -67,34 +80,16 @@ Durante el desarrollo del proyecto se incorporarán progresivamente nuevas tecno
 
 ## Tecnologías
 
-
-
 Actualmente:
-
-
-
 - HTML5
-
-
-
-Próximamente:
-
-
-
 - CSS3
-
 - JavaScript
-
-- React
-
+- MongoDB
+- Expres
 - Node.js
 
-- Express
-
-- MongoDB
-
-
-
+Próximamente:
+- React
 
 ## Autor
 

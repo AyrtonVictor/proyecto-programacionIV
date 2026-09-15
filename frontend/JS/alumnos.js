@@ -8,6 +8,13 @@ btnCancelar.style.display = "none"
 
 const btnGuardar = document.querySelector("#btnGuardar")
 
+async function cargarAlumnos() {
+    const respuesta = await fetch("http://localhost:3000/alumnos")
+    const alumnos = await respuesta.json()
+}
+
+
+
 
 // Funciones auxiliares para LocalStorage
 function guardarDatos(clave, datos) {
@@ -91,8 +98,10 @@ formulario.addEventListener("submit", function (event) {
     formulario.reset();
 });
 
-function obtenerAlumnos() {
-    return obtenerDatos("alumnos");
+async function obtenerAlumnos() {
+    const respuesta = await fetch("http://localhost:3000/alumnos")
+    const alumnos = await respuesta.json()
+    return alumnos
 }
 
 function mostrarAlumnos(alumnos) {
@@ -100,15 +109,15 @@ function mostrarAlumnos(alumnos) {
     for (const alumno of alumnos) {
         listaAlumnos.innerHTML += `
         <tr>
-            <td>${alumno.id}</td>
+            <td>${alumno.legajo}</td>
             <td>${alumno.nombre}</td>
             <td>${alumno.carrera}</td>
             <td>${alumno.correo}</td>
             <td>
-                <button class="btn-editar" data-id="${alumno.id}" title="Editar alumno">
+                <button class="btn-editar" data-id="${alumno.legajo}" title="Editar alumno">
                     <i class="fa-solid fa-pen"></i>
                 </button>
-                <button class="btn-eliminar" data-id="${alumno.id}" title="Eliminar alumno">
+                <button class="btn-eliminar" data-id="${alumno.legajo}" title="Eliminar alumno">
                     <i class="fa-solid fa-trash"></i>
                 </button>
             </td>
@@ -185,5 +194,9 @@ function cancelarEdicion() {
 
 btnCancelar.addEventListener("click", cancelarEdicion)
 
-const alumnosIniciales = obtenerAlumnos();
-mostrarAlumnos(alumnosIniciales);
+async function iniciar() {
+    const alumnos = await obtenerAlumnos()
+    mostrarAlumnos(alumnos)
+}
+
+iniciar()
